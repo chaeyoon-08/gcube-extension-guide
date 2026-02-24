@@ -36,6 +36,7 @@ ollama serve &
 OLLAMA_PID=$!
 sleep 5
 ollama pull qwen2.5-coder:7b
+ollama pull deepseek-r1:8b
 kill $OLLAMA_PID 2>/dev/null || true
 echo "✅ 모델 다운로드 완료"
 
