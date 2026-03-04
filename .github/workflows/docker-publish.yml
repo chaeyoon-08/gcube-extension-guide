@@ -32,7 +32,7 @@ jobs:
       # 🏗️ 빌드 & 두 곳에 동시 푸시
       - uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./ghcr-dockerhub-test
           push: true
           tags: |
             ghcr.io/${{ github.repository }}:latest
