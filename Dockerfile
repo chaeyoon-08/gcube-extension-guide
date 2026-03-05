@@ -19,12 +19,6 @@ COPY prompt.txt .
 COPY start.sh .
 RUN chmod +x start.sh
 
-# 모델 다운로드 (빌드 시)
-RUN ollama serve & sleep 5 && \
-    ollama pull qwen2.5-coder:7b && \
-    ollama pull deepseek-r1:8b && \
-    pkill ollama || true
-
 EXPOSE 8080
 
 COPY entrypoint.sh /entrypoint.sh
